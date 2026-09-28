@@ -2428,3 +2428,36 @@ footer a {
 .brand-ring-inner{fill:none;stroke:#fff0bd;stroke-width:2}
 .brand-mark-ring text{fill:#5c171c;font:800 10px Arial,Helvetica,sans-serif;letter-spacing:.9px}
 @media(max-width:650px){.brand .brand-mark{width:92px;height:92px;flex-basis:92px}.brand .brand-mark-center{width:60px;height:60px}}
+
+/* Anneau doré animé même si le SVG du modèle n'est pas encore installé. */
+.brand .brand-mark{position:relative;isolation:isolate}
+.brand .brand-mark::before{
+  content:"";display:block;position:absolute;inset:2px;z-index:2;
+  border-radius:50%;pointer-events:none;
+  background:conic-gradient(#ffdf72 0deg,#a66b08 45deg,#fff5be 80deg,#c48b17 130deg,#ffe58c 190deg,#a66b08 245deg,#fff5be 295deg,#d49b27 360deg);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 13px),#000 calc(100% - 12px));
+  mask:radial-gradient(farthest-side,transparent calc(100% - 13px),#000 calc(100% - 12px));
+  animation:sciptGoldSpin 5s linear infinite;
+  box-shadow:none;
+}
+.brand .brand-mark::after{display:none}
+.brand .brand-mark-ring{animation:sciptGoldSpin 8s linear infinite;transform-origin:center;transform-box:view-box}
+@keyframes sciptGoldSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(max-width:650px){.brand .brand-mark::before{-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 8px));mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 8px))}}
+
+/* Finition du blason : anneau fin, sans cercle intérieur, logo agrandi. */
+.brand .brand-mark-center{width:105px;height:105px}
+.brand .brand-mark::before{
+  inset:3px;
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 5px),#000 calc(100% - 4px));
+  mask:radial-gradient(farthest-side,transparent calc(100% - 5px),#000 calc(100% - 4px));
+}
+.brand-ring-edge{stroke-width:5}
+.brand-ring-inner{display:none}
+@media(max-width:650px){
+  .brand .brand-mark-center{width:73px;height:73px}
+  .brand .brand-mark::before{
+    -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));
+    mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));
+  }
+}
