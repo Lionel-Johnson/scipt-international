@@ -2352,3 +2352,15 @@ footer a {
 @media(max-width:991px){.admissions-mega{position:static!important;width:100%;max-height:65vh}.admissions-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.admissions-menu-heading{min-height:70px}}
 @media(max-width:575px){.admissions-menu-grid{grid-template-columns:1fr}.admissions-menu-column{border-right:0}.admissions-menu-heading{min-height:0}.news-ticker-label{padding:0 10px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.news-ticker-track{animation:none;flex-wrap:wrap;width:auto}.news-ticker-track span[aria-hidden="true"]{display:none}.news-ticker-window{overflow:auto}}
+
+/* Réseaux officiels : icônes Font Awesome Brands et libellés visibles. */
+.scipt-community{padding:0 0 26px;margin-bottom:24px;border-bottom:1px solid #ffffff2c}
+.scipt-community h2{font-size:clamp(19px,2vw,25px);color:#fff;margin-bottom:8px}
+.scipt-community p{color:#dae4f5;margin-bottom:14px}
+.scipt-social-links{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.scipt-social-link{display:inline-flex;align-items:center;gap:9px;padding:10px 14px;background:#ffffff12;border:1px solid #ffffff35;border-radius:9px;color:#fff;font-weight:700;font-size:13px;transition:background .2s,transform .2s}
+.scipt-social-link:hover,.scipt-social-link:focus-visible{background:#ffffff2c;color:#fff;transform:translateY(-2px)}
+.scipt-social-link i{font-size:20px;width:22px;text-align:center}
+.scipt-community-site a{text-decoration:underline}
+.scipt-community-signature{font-weight:600;font-size:13px}
+@media(prefers-reduced-motion:reduce){.scipt-social-link{transition:none}.scipt-social-link:hover{transform:none}}
