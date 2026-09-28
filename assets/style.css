@@ -2418,3 +2418,13 @@ footer a {
   .homepage-hero .slide-mediatech-links strong{font-size:.84rem}
   .homepage-hero .slide-mediatech-links small{font-size:.68rem}
 }
+
+/* Logo fourni entier : seul l'anneau doré portant le nom tourne. */
+.brand .brand-mark{width:132px;height:132px;flex:0 0 132px}
+.brand .brand-mark-center{width:86px;height:86px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none;z-index:1}
+.brand .brand-mark-center img{position:static;display:block;width:100%;height:100%;max-width:100%;transform:none;object-fit:contain;object-position:center;border:0;border-radius:0}
+.brand .brand-mark-ring{z-index:2;animation:sciptTextOrbit 12s linear infinite;transform-origin:50% 50%}
+.brand-ring-edge{fill:none;stroke:#dbad45;stroke-width:18}
+.brand-ring-inner{fill:none;stroke:#fff0bd;stroke-width:2}
+.brand-mark-ring text{fill:#5c171c;font:800 10px Arial,Helvetica,sans-serif;letter-spacing:.9px}
+@media(max-width:650px){.brand .brand-mark{width:92px;height:92px;flex-basis:92px}.brand .brand-mark-center{width:60px;height:60px}}
